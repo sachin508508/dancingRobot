@@ -1,0 +1,148 @@
+.robot{
+    position: absolute;
+    top: 20%;
+    left:20%;
+
+}
+.face{
+    border: 2px solid;
+    background-color: aquamarine;
+    border-radius: 200px 200px 0 0;
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    left: -50px;
+    top: 50px;
+
+}
+.lefteye{
+    border: 5px solid white;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    position: inherit;
+    border-radius: 100%;
+    left: 40px;
+    top: 10px;
+}
+.righteye{
+    border: 5px solid white;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    position: inherit;
+    left: 110px;
+    top: 8px;
+    border-radius: 100%;
+}
+.mouth{
+    border: 2px solid black;
+    background-color: gray;
+    height: 10px;
+    width: 70px;
+    position: inherit;
+    left: 60px;
+    top: 63px;
+
+}
+.neck{
+    background-color: black;
+    height: 50px;
+    width: 70px;
+    position: relative;
+    z-index: -1;
+    top: 60px;
+    left: 65px;
+
+}
+.leftantenna1{
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    position: relative;
+    top: 20px;
+    right: 74px;
+}
+.rightantenna1{
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    position: relative;
+    top: 20px;
+    left: 179px;
+}
+    .leftantenna2{
+        background-color: black;
+        width: 100px;
+        height: 4px;
+        position: relative;
+        top: -20px;
+        right: 60px;
+        transform: rotate(45deg);
+    }
+    .rightantenna2{
+        background-color: black;
+        width: 100px;
+        height: 4px;
+        position: relative;
+        top: -20px;
+        left: 166px;
+        transform: rotate(135deg);
+    
+    }
+
+.parts{
+    border: 2px solid;
+    background-color: aquamarine;
+    height: 190px;
+    width: 200px;
+    position: absolute;
+    border-radius: 0 0 40% 40%;
+    top: 145px;
+    left: -50px;
+
+}
+.lefthand{
+    border: 2px solid;
+    background-color: aqua;
+    height: 150px;
+    width: 30px;
+    position: relative;
+    top: 0;
+
+
+}
+.righthand{
+    border: 2px solid;
+    background-color: aqua;
+    height: 150px;
+    width: 30px;
+    position: absolute;
+    left: 170px;
+    top: 0;
+
+
+}
+.leftleg{
+    border: 2px solid;
+    background-color: aqua;
+    height: 150px;
+    width: 40px;
+    position: absolute;
+    left: 120px;
+    top: 160px;
+    z-index: -2;
+
+}
+.rightleg{
+    border: 2px solid;
+    background-color: aqua;
+    height: 150px;
+    width: 40px;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+    z-index: -2;
+
+
+}
