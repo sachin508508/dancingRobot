@@ -1,7 +1,7 @@
 .robot{
     position: absolute;
-    top: 20%;
-    left:20%;
+    top: 250px;
+    left:650px;
 
 }
 .face{
@@ -65,6 +65,7 @@ margin: 2rem;
 position: relative;
 top: -130px;
 left: 54px;
+z-index: -1;
 }
 .antennaball{
     background-color: tomato;
@@ -72,8 +73,8 @@ left: 54px;
     width: 30px;
     position: inherit;
     border-radius: 100%;
-    left: 78px;
-    top: -92px;
+    left: -12px;
+    top: -6px;
     z-index: 2;
 }
 .parts{
@@ -143,3 +144,92 @@ left: 54px;
     left: 13px;
     border-radius: 100%;
 }
+@keyframes movelefthand {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }   
+}
+@keyframes moverighthand {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }   
+}@keyframes moveantenna {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+    }
+    25%{
+        transform: rotate(45deg);
+        transform-origin: bottom center;
+    }
+    50%{
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+    }
+    75%{
+        transform: rotate(-45deg);
+        transform-origin: bottom center;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: bottom center;
+    }   
+}
+.robot .leftantenna1{
+    animation: moveantenna 2s infinite;
+}
+.robot .righthand{
+    animation: moverighthand 3.5s infinite;
+}
+.robot .lefthand{
+    animation: movelefthand 3s infinite;
+}
+.movement {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(230px); 
+    }
+    100% {
+        transform: translateX(-180px); 
+    }
