@@ -1,6 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .robot{
     position: absolute;
-    top: 50px;
+    top: 75px;
     left:650px;
 
 }
@@ -16,7 +36,7 @@
 
 }
 .lefteye{
-    border: 5px solid white;
+    border: 5px solid lightslategray;
     background-color: black;
     height: 30px;
     width: 30px;
@@ -26,7 +46,7 @@
     top: 40px;
 }
 .righteye{
-    border: 5px solid white;
+    border: 5px solid lightslategray;
     background-color: black;
     height: 30px;
     width: 30px;
@@ -43,16 +63,6 @@
     position: inherit;
     left: 60px;
     top: 103px;
-
-}
-.neck{
-    background-color: black;
-    height: 50px;
-    width: 70px;
-    position: relative;
-    z-index: -1;
-    top: 60px;
-    left: 65px;
 
 }
 .leftantenna1{
@@ -87,6 +97,33 @@ z-index: -1;
     top: 145px;
     left: -50px;
 
+}
+.b1{
+    background-color: rgb(7, 205, 13);
+    height: 20px;
+    width: 20px;
+    position: inherit;
+    bottom: 110px;
+    left: 55px;
+border-radius: 100%;
+}
+.b2{
+    background-color: red;
+    height: 20px;
+    width: 50px;
+    position: inherit;
+    bottom: 110px;
+    left: 85px;
+
+}
+.b3{
+    background-color: blue;
+    height: 20px;
+    width: 20px;
+    position: inherit;
+    bottom: 110px;
+    left: 145px;
+    border-radius: 100%;
 }
 .lefthand{
     border: 2px solid;
@@ -157,6 +194,7 @@ z-index: -1;
     left: 40px;
 
 }
+
 @keyframes movelefthand {
     0%,100%{
         transform: rotate(0deg);
@@ -209,7 +247,8 @@ z-index: -1;
         transform: rotate(-90deg);
         transform-origin: top center;
     }   
-}@keyframes moveantenna {
+}
+@keyframes moveantenna {
     0%{
         transform: rotate(0deg);
         transform-origin: bottom center;
@@ -252,19 +291,19 @@ z-index: -1;
     0% {
         transform: translateX(330px); 
         transform: translateY(50px);
-        left: -180px;
+        left: -380px;
     }
  
     20%{
         transform: translateX(200px);
         transform: translateY(0px);
-        left: -120px;
+        left: -150px;
     }
 
     40%{
         transform: translateX(-30px);
         transform: translateY(50px);
-        left: -60px;
+        left: 0px;
     }
 
     60%{
@@ -276,13 +315,13 @@ z-index: -1;
 80%{
     transform: translateX(-230px);
     transform: translateY(50px);
-    left: -85px;
+    left: -150px;
 }
 
     100% {
         transform: translateX(-330px); 
         transform: rotateY(0);
-        left: -180px;
+        left: -380px;
     }
 }
 
@@ -303,4 +342,68 @@ z-index: -1;
 }
 .robot .mouth{
     animation: mouthsing 1s infinite;
+}
+@keyframes colorb1 {
+    0%{
+        background-color: green;
+
+    }
+    33.3%{
+        background-color: red;
+
+    }
+    66.6%{
+        background-color: blue;
+
+    }
+    100%{
+
+        background-color: green;
+    }
+    
+}@keyframes colorb2 {
+    0%{
+        background-color: red;
+
+    }
+    33.3%{
+        background-color: blue;
+
+    }
+    66.6%{
+        background-color: green;
+
+    }
+    100%{
+
+        background-color: red;
+    }
+    
+}@keyframes colorb3 {
+    0%{
+        background-color: blue;
+
+    }
+    33.3%{
+        background-color: green;
+
+    }
+    66.6%{
+        background-color: red;
+
+    }
+    100%{
+
+        background-color: blue;
+    }
+    
+}
+.robot .b1{
+    animation: colorb1 2s infinite;
+}
+.robot .b2{
+    animation: colorb2 2s infinite;
+}
+.robot .b3{
+    animation: colorb3 2s infinite;
 }
