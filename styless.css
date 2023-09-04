@@ -1,6 +1,6 @@
 .robot{
     position: absolute;
-    top: 250px;
+    top: 50px;
     left:650px;
 
 }
@@ -60,10 +60,10 @@ width: 0;
 height: 0;
 border-left: 5px solid transparent;
 border-right: 5px solid transparent;
-border-bottom: 100px solid rgb(211, 212, 211);
+border-bottom: 80px solid rgb(211, 212, 211);
 margin: 2rem;
 position: relative;
-top: -130px;
+top: -110px;
 left: 54px;
 z-index: -1;
 }
@@ -96,6 +96,7 @@ z-index: -1;
     position: relative;
     border-radius: 2% 2% 40% 40%;
     top: 0;
+    z-index: 2;
 
 
 }
@@ -108,6 +109,7 @@ z-index: -1;
     border-radius: 2% 2% 40% 40%;
     left: 170px;
     top: 0;
+    z-index: 2;
 
 
 }
@@ -119,7 +121,7 @@ z-index: -1;
     position: absolute;
     left: 120px;
     top: 160px;
-    z-index: -2;
+    z-index: -1;
     border-radius: 2% 2% 40% 40%;
 
 }
@@ -131,7 +133,7 @@ z-index: -1;
     position: absolute;
     top: 160px;
     left: 40px;
-    z-index: -2;
+    z-index: -1;
     border-radius: 2% 2% 40% 40%;
 }
 .legroll{
@@ -144,47 +146,67 @@ z-index: -1;
     left: 13px;
     border-radius: 100%;
 }
+.tv{
+    border: 2px solid;
+    background-image: url(heart.jfif);
+    height: 50px;
+    width: 130px;
+    background-size: cover;
+    position: relative;
+    top: -60px;
+    left: 40px;
+
+}
 @keyframes movelefthand {
-    0%{
+    0%,100%{
         transform: rotate(0deg);
         transform-origin: top center;
     }
-    25%{
+    16.6%{
         transform: rotate(90deg);
         transform-origin: top center;
     }
-    50%{
+    33.3%{
         transform: rotate(0deg);
         transform-origin: top center;
     }
-    75%{
+    49.8%{
+        transform: rotate(-90deg);
+        transform-origin: top center;
+    }
+    66.4%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    83%{
         transform: rotate(90deg);
-        transform-origin: top center;
-    }
-    100%{
-        transform: rotate(0deg);
         transform-origin: top center;
     }   
 }
 @keyframes moverighthand {
-    0%{
+    0%,100%{
         transform: rotate(0deg);
         transform-origin: top center;
     }
-    25%{
+    16.6%{
         transform: rotate(90deg);
         transform-origin: top center;
     }
-    50%{
+    33.3%{
         transform: rotate(0deg);
         transform-origin: top center;
     }
-    75%{
-        transform: rotate(90deg);
+    49.8%{
+        transform: rotate(-90deg);
         transform-origin: top center;
     }
-    100%{
+    66.4%{
         transform: rotate(0deg);
+        transform-origin: top center;
+
+    }
+    83%{
+        transform: rotate(-90deg);
         transform-origin: top center;
     }   
 }@keyframes moveantenna {
@@ -210,26 +232,75 @@ z-index: -1;
     }   
 }
 .robot .leftantenna1{
-    animation: moveantenna 2s infinite;
+    animation: moveantenna 3s infinite;
 }
 .robot .righthand{
-    animation: moverighthand 3.5s infinite;
+    animation: moverighthand 2s infinite;
 }
 .robot .lefthand{
-    animation: movelefthand 3s infinite;
+    animation: movelefthand 2s infinite;
 }
 .movement {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: absolute;
-    animation: bounce 1s infinite alternate;
+    animation: bounce 3s infinite alternate;
 }
 
 @keyframes bounce {
     0% {
-        transform: translateX(230px); 
+        transform: translateX(330px); 
+        transform: translateY(50px);
+        left: -180px;
     }
+ 
+    20%{
+        transform: translateX(200px);
+        transform: translateY(0px);
+        left: -120px;
+    }
+
+    40%{
+        transform: translateX(-30px);
+        transform: translateY(50px);
+        left: -60px;
+    }
+
+    60%{
+        transform: translate(-130px);
+        transform: translateY(0px);
+        left: 10;
+    }
+
+80%{
+    transform: translateX(-230px);
+    transform: translateY(50px);
+    left: -85px;
+}
+
     100% {
-        transform: translateX(-180px); 
+        transform: translateX(-330px); 
+        transform: rotateY(0);
+        left: -180px;
     }
+}
+
+
+
+@keyframes mouthsing {
+    0%,50%,100%{
+        border-radius: 0%;
+        height:6px
+
+    }
+    25%,75%{
+        border-radius: 0%;
+        height: 10px;
+
+    }
+    
+}
+.robot .mouth{
+    animation: mouthsing 1s infinite;
+}
