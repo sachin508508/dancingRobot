@@ -8,7 +8,6 @@ h1{
     text-align: center;
     color: aqua;
     z-index: 100;
-
 }
 h3{
     font-size: 30px;
@@ -17,15 +16,12 @@ h3{
     z-index: 100; position: relative;
     top: 600px;
     left: 700px;
-
 }
-
 .video-container {
     position: relative;
     width: 100%;
     height: 100%;
 }
-
 video {
     position: absolute;
     top: 0;
@@ -50,7 +46,6 @@ video {
     position: absolute;
     left: -50px;
     top: 0px;
-
 }
 .lefteye{
     border: 5px solid lightslategray;
@@ -80,7 +75,6 @@ video {
     position: inherit;
     left: 60px;
     top: 103px;
-
 }
 .leftantenna1{
 width: 0;
